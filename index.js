@@ -11,9 +11,9 @@ try {
     .split(",")
     .map(prefix => prefix.trim())
     .reduce((acc, curr) => acc.replace(curr, ""), process.env.GITHUB_HEAD_REF);
-  
-  console.log("prefix", core.getInput("prefix");
-  console.log("process.env.GITHUB_HEAD_REF:" process.env.GITHUB_HEAD_REF);
+
+  console.log("prefix", core.getInput("prefix"));
+  console.log("process.env.GITHUB_HEAD_REF:", process.env.GITHUB_HEAD_REF);
   console.log(`branch-name: ${branchName}`);
 
   // Get the JSON webhook payload for the event that triggered the workflow
