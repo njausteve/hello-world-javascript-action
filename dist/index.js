@@ -53,20 +53,15 @@ try {
   // `who-to-greet` input defined in action metadata file
   const nameToGreet = core.getInput("who-to-greet");
   const time = new Date().toTimeString();
-
-  const branchName = core
-    .getInput("prefix")
-    .split(",")
-    .map(prefix => prefix.trim())
-    .reduce((acc, curr) => acc.replace(curr, ""), process.env.GITHUB_HEAD_REF);
-
-  console.log("prefix", core.getInput("prefix"));
-  console.log("process.env.GITHUB_HEAD_REF:", process.env.GITHUB_HEAD_REF);
-  console.log(`branch-name: ${branchName}`);
+  const re = "/refs/heads//gm";
 
   // Get the JSON webhook payload for the event that triggered the workflow
   const payload = JSON.stringify(github.context.payload, undefined, 2);
   core.setOutput("time", time);
+
+  const branchName = payload.ref.split(re)[1];
+
+  console.log(`branch-name: ${branchName}`);
 
   console.log(`Hello ${nameToGreet}!`);
   console.log(`The event payload: ${payload}`);
