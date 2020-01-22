@@ -1,7 +1,8 @@
 name: 'Habari dunia'
 description: 'Greet someone and record the time'
-icon: 'activity'
-color: 'yellow'
+branding:
+  icon: 'activity'
+  color: 'yellow'
 inputs:
   who-to-greet: #id of input
     description: 'who to greet'
