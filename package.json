@@ -1,0 +1,12 @@
+{
+  "name": "hello-world-javascript-action",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:njausteve/hello-world-javascript-action.git",
+  "author": "stephen <njaustevedomino@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.1",
+    "@actions/github": "^2.0.1"
+  }
+}
