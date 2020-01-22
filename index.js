@@ -21,7 +21,7 @@ try {
   core.setOutput("time", time);
 
   console.log(`Hello ${nameToGreet}!`);
-  console.log(`The event payload: ${payload}`);
+  console.log(`The event payload----------->: ${payload}`);
 } catch (error) {
   core.setFailed(error.message);
 }
