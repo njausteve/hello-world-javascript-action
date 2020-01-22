@@ -11,7 +11,7 @@ try {
   const payload = JSON.stringify(github.context.payload, undefined, 2);
   core.setOutput("time", time);
 
-  const branchName = payload.ref.split(re)[1];
+  const branchName = payload.ref;
 
   console.log(`branch-name: ${branchName}`);
 
