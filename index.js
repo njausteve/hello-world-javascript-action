@@ -12,6 +12,9 @@ try {
     .map(prefix => prefix.trim())
     .reduce((acc, curr) => acc.replace(curr, ""), process.env.GITHUB_HEAD_REF);
   
+  
+  core.exportVariable('BRANCH_NAME', branchName);
+  
   console.log("prefix", core.getInput("prefix");
   console.log("process.env.GITHUB_HEAD_REF:" process.env.GITHUB_HEAD_REF);
   console.log(`branch-name: ${branchName}`);
