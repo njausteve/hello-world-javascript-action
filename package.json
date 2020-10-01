@@ -6,7 +6,7 @@
   "author": "stephen <njaustevedomino@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.2.1",
+    "@actions/core": "^1.2.6",
     "@actions/github": "^2.0.1"
   }
 }
